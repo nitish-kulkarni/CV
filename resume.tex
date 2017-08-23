@@ -1,0 +1,185 @@
+\documentclass[10pt,a4paper,English]{article}
+
+\usepackage[left=0.45in,top=0.4in,right=0.45in,bottom=0.4in]{geometry}
+
+% Font
+\usepackage{tgpagella}
+\usepackage[T1]{fontenc}
+
+% \fontsize{8}{10}
+% Other optional fonts
+% \fontfamily{garamond}
+% \selectfont
+
+% Some gen page commands
+\pagestyle{empty}
+%\setlength{\tabcolsep}{0pt}
+
+% Text size 
+\usepackage{relsize}
+
+% Colors
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+\definecolor{dark-blue}{rgb}{0.15,0.15,0.8}
+\definecolor{table-cell}{rgb}{0.9,0.9,0.9}
+\definecolor{table-border}{rgb}{0.7,0.7,0.7}
+\definecolor{itemyear}{rgb}{0.3,0.3,0.3}
+
+% for Tables
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+% Hyperrefs and color for that
+\usepackage{hyperref}  
+\hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
+
+% Custom Commands
+\newcommand{\lv}{\color{table-border}\vrule}
+\newcommand{\lh}{\arrayrulecolor{table-border}}
+\newcommand{\lhb}{\arrayrulecolor{black}}
+
+\newcommand\roottitle[1]{\vspace{-4mm}\subsubsection*{\uppercase{#1}}\vspace{-0.3em}\nopagebreak[4]\hrule}
+\newcommand\maintitle[3]{\vbox to 0pt{\hfill\scriptsize\color{gray} #3}\vspace{-0.4em}\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
+\newcommand\itemyear[1]{\hfill \textbf{\emph{\color{itemyear} #1}}}
+\newcommand\itemenv{\setlength\itemsep{0.5pt} \addtolength{\itemindent}{-5mm}\vspace{-1.5mm}}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+% Beginning the document
+
+\begin{document}
+
+% MAIN TITLE
+% The next two lines are if I ever decide to have all four details to the right
+%\vbox to -5mm{\hfill\scriptsize\color{gray} {\small \href{https://www.linkedin.com/in/ni4lgi}{\texttt{in.linkedin.com/in/ni4lgi}}} }
+%\vbox to -5mm{\hfill\scriptsize\color{gray} {\small \href{https://www.linkedin.com/in/ni4lgi}{\texttt{in.linkedin.com/in/ni4lgi}}} }
+\noindent{\LARGE \textbf{Nitish Kulkarni}} \\
+\vspace{-2mm}
+
+\small
+
+\noindent Quantitative Analyst\hfill\href{mailto:ni4lgi@gmail.com}{\texttt{ni4lgi\mbox{}@\mbox{}gmail.com}}\hfill\href{https://www.linkedin.com/in/ni4lgi}{\texttt{in.linkedin.com/in/ni4lgi}}\\
+\noindent Goldman Sachs (India)\hfill\textsmaller{+}91 7760833711\hfill\href{http://www.nitish-kulkarni.com}{\texttt{www.nitish-kulkarni.com}}
+\vspace{2mm}
+% \href{https://www.linkedin.com/in/nitish-kulkarni-90270a33}{www.linkedin.com/in/nitishkulkarni}\\
+
+% TITLE 1
+\roottitle{Education}
+
+% Education Table 
+
+\renewcommand{\arraystretch}{1.2}
+\setlength\tabcolsep{8pt}
+\begin{tabularx}{\textwidth}{ !{\lv} *{3}{c !{\lv} } X !{\lv}}
+    Indian Institute of Technology & \textbf{B.Tech.}:Electrical \textbf{M.Tech.}: Microelectronics \& VLSI & 
+    9.13/10 (Rank: 2/24) & \multirow{2}{*}{ 2009-14 } \\ \lh \cline{2-3}
+    Madras, Chennai                       &  \textbf{Minor}:Economics                                          & 9.4/10 (Minor)       &         \\ \hline
+    FIITJEE Junior College, Hyd.          &  XII (State Board, Andhra Pradesh)                                 & 94.1\%               & 2007-09 \\ \hline
+    Guru Nanak Public School, Bidar       &  X (C.B.S.E)                                                       & 92.6\%               & 2006-07 \\ \hline
+\end{tabularx}
+\vspace{2mm}
+
+% TITLE 2
+\roottitle{Scholastic Achievements}
+\vspace{4mm}
+\begin{itemize} \itemenv
+    \item IITJEE, A.I.R. \textbf{465 out of 4 Lac}; AIEEE, A.I.R. 208 out of 10 Lakh, received \textbf{C.B.S.E. Merit Scholarship} \itemyear{2009}
+    \item \textbf{Only student from IIT Madras} to be awarded the \textbf{Schenider Electric India Foundation (SEIF) Scholarship} \itemyear{2011} 
+    \item \textbf{Olympiads}: Among \textbf{top 1\%} in \textbf{National Standard Examination in Physics (NSEP)} and in \textbf{Chemistry (NSEC)} \itemyear{2008}
+\end{itemize}
+
+% TITLE 3
+\roottitle{Professional Experience}
+\vspace{4mm}
+\begin{itemize} \itemenv
+    \item \textbf{Quantitative Analyst, Goldman Sachs, Bengaluru} \hfill (\emph{ Fixed Income Strats, Investment Management Division }) \itemyear{June 2014 - Present}
+        \begin{itemize} \itemenv 
+            \item Worked on \textbf{quantitative and statistic models} to build trading strategies that enhance portfolio performance
+            \begin{itemize} \itemenv \vspace{1mm}
+                \item[--] Designed and built research tools for \textbf{backtesting strategies} and analyzing \textbf{statistical properties of time series}
+                \item[--] Incorporated techniques of \textbf{Robust Optimization}, \textbf{Linear Regression Models} \& \textbf{Principal Component Analysis (PCA)} 
+                \end{itemize}
+            \item Built and developed robust infrastructure tools that assist the traders in managing their positions
+        \end{itemize}
+    \item \textbf{ Intern, Qualcomm Inc., Bengaluru } \hfill({\emph{ Extraction of Critical Paths for Pre-Silicon Validation }}) \itemyear{May - July 2013}
+        \begin{itemize} \itemenv
+            \item Received a \textbf{Pre-Placement Offer} for the position of an Engineer at the firm
+            \item Devised and implemented a consolidated \textbf{path-extraction algorithm} for a tool, realizing a \textbf{threefold increase} in its robustness
+            % \item Built \textbf{a User Interface} for a new tool, established compatibility with an existing tool, and \textbf{halved its run-time} 
+        \end{itemize}
+    \item \textbf{ Intern, Texas Instruments, Bengaluru } \hfill({\emph{ Estimation of Soft Error Rate in Semiconductor Devices }}) \itemyear{May - July 2012}
+        \begin{itemize} \itemenv
+            \item Was offered an \textbf{Extension of Intenship Programme} for the year 2013, for successfully automating estimaton of Fault-In-Time
+            \item Developed \textbf{a probabilistic technique} for \emph{Estimation of Soft Error Rate} to achieve 94\% accuracy against simulations
+        \end{itemize}
+    \item \textbf{ Intern, Harness Handitouch Pvt. Ltd., Chennai } \hfill({\emph{ Product Development of FTIR-based Multitouch Surface}}) \itemyear{May - July 2011}
+        \begin{itemize} \itemenv
+            \item Won the \textbf{Best Inten Award} among 4 interns from IIT Madras
+            \item Built an \textbf{alpha-prototype} of a multi-touch surface, costing almost 80\% lesser than a similar commercial product in the market
+            \item Proposed and developed a \textbf{low-cost smart board}, incorporating an alternative technology of IR sensing and Video Processinig
+        \end{itemize}
+  \end{itemize}
+
+% TITLE 4
+\roottitle{Projects}
+\vspace{4mm}
+\begin{itemize} \itemenv
+    \item \textbf{Modeling of glitching effects in estimation of Dynamic Power consumption} \hfill \itemyear{July 2013 - June 2014} \\
+    \emph{Master's Dissertation, Department of Electrical Engg. (Guide: Dr. Nitin Chandrachoodan)}
+        \begin{itemize} \itemenv
+            \item Implemented \textbf{probability propagation algorithm} to estimate average number of transitions at every node in the circuit
+            \item Modeled the probability distribution of glitch power consumption at nodes by \textbf{ambiguity interval propagation algorithm}
+            \item Studied impact of process variations by \textbf{Monte Carlo Analysis} and developed an approach to identify high glitch nets
+        \end{itemize}
+    \item \textbf{ Smart Switch-board \& Centralized Inverter for Variable Frequency Drive } \hfill \itemyear{Nov - Dec 2012} \\
+    \emph{Schneider Electric Innovation Challenge} 
+        \begin{itemize} \itemenv
+            \item Modeled a technique to install \textbf{Variable Frequency Drive} for house-hold motor-based appliances using centralised inverter 
+            \item \textbf{Presented poster} at Schneider Electric, demonstrating reduction in AC-DC conversion losses 
+        \end{itemize}
+\end{itemize}
+
+% TITLE 5
+\roottitle{Course Work}
+\vspace{2mm}
+\noindent Data Structures and Algorithms, Machine Learning, Image Signal Processing, Probability and Stochastic Processes, Graph Theory, \\ 
+Computational Methods in Electrical Engg., Digital and Analog Signal Processing, Computer Organization and Microprocessors
+\vspace{2mm}
+
+% TITLE 6
+\roottitle{Honors and Awards}
+\vspace{4mm}
+\begin{itemize} \itemenv
+    \item \textbf{Campus Winner} (among top {3} in India ), \textbf{Goldman Sachs Quantify}; represented IITM for finals at GS Bangalore \itemyear{Oct 2013}
+    \item \textbf{2nd prize} among 25 finalists, General Electric Research Expo \itemyear{Jan 2013}
+    \item \textbf{Finalists}, among the 2 teams selected to represent IIT Madras at \textbf{Inter IIT Tech Competition}, held at IIT Kanpur \itemyear{Jan 2013}
+    \item \textbf{Top 9} teams (out of 150 teams nationwide), \textbf{Schneider Electric Innovation Challenge} \itemyear{ Dec 2012 } 
+\end{itemize}
+
+% TITLE 7
+\roottitle{Co-curricular Activities}
+\renewcommand{\arraystretch}{1.2}
+\setlength\tabcolsep{5pt}
+\begin{tabularx}{\textwidth}{ !{\lv} >{\columncolor{table-cell}} c !{\lv} X !{\lv} }
+& \tabitem \textbf{Convenor, Electronics Club}, IIT Madras \itemyear{2012-13}\\
+& \tabitem \textbf{Coordinator}, \emph{Shaastra Circuit Design Challenge}, Shaastra$^\dag$ 2011, IIT Madras \itemyear{2011} \\
+\multirow{-3}{*}{ Leadership } 
+& \tabitem \textbf{Coordinator}, \emph{Project X}, Shaastra$^\dag$ 2010, IIT Madras \itemyear{2010} \\ 
+\lh \hline
+& \tabitem \textbf{Tutor}, short-term course on \textbf{Programming In Python} by \emph{Reflections - Dhruva Club}, IIT Madras \itemyear{ 2014 } \\
+& \tabitem \textbf{Tutor}, Computer Organization and Architecture, \emph{Quality Enhancement in Engineering Education} \itemyear{2014} \\
+\multirow{-3}{*}{ Technical }  
+& \tabitem Placed $\mathbf{2^{nd}}$ at the event \emph{The Ultimate Enginner}, at Shaastra$^\dag$ 2013 \itemyear{2013} \\ 
+\hline
+& \tabitem Won a debate event called \textbf{Big Fight} in \textbf{Forays}, the mathematics department festival of IIT Madras \itemyear{2011} \\
+\multirow{-2}{*}{ Literary }   
+& \tabitem Placed $\mathbf{2^{nd}}$ at \emph{Dramatics, LitSoc} - an Inter-hostel literary event at IIT Madras \itemyear{2009} \\ 
+\lh \hline
+\end{tabularx}
+\vspace{2mm}
+
+\noindent {\tiny $^\dag$Shaastra is the annual technical festival of IIT Madras}
+
+\end{document}
