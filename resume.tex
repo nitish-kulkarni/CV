@@ -36,17 +36,20 @@
 \usepackage{hyperref}  
 \hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
 
+\usepackage{amsmath,amssymb,amsthm,enumitem}
+
 % Custom Commands
 \newcommand{\lv}{\color{table-border}\vrule}
 \newcommand{\lh}{\arrayrulecolor{table-border}}
 \newcommand{\lhb}{\arrayrulecolor{black}}
 
-\newcommand\roottitle[1]{\vspace{-4mm}\subsubsection*{\uppercase{#1}}\vspace{-0.3em}\nopagebreak[4]\hrule}
+\newcommand\roottitle[1]{\vspace{-4mm}\subsubsection*{\uppercase{#1}}\vspace{-0.3em}\nopagebreak[4]\hrule\vspace{4mm}}
 \newcommand\maintitle[3]{\vbox to 0pt{\hfill\scriptsize\color{gray} #3}\vspace{-0.4em}\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
 \newcommand\itemyear[1]{\hfill \textbf{\emph{\color{itemyear} #1}}}
 \newcommand\itemenv{\setlength\itemsep{0.5pt} \addtolength{\itemindent}{-5mm}\vspace{-1.5mm}}
+\newcommand\itemenvnoindent{\setlength\itemsep{-1pt} \vspace{-1.5mm}}
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
-
+\newcommand\hspacing{1mm}
 % Beginning the document
 
 \begin{document}
@@ -60,31 +63,31 @@
 
 \small
 
-\noindent Masters, School of Computer Science\hfill\href{mailto:ni4lgi@gmail.com}{\texttt{ni4lgi\mbox{}@\mbox{}gmail.com}}\hfill\href{https://www.linkedin.com/in/ni4lgi}{\texttt{in.linkedin.com/in/ni4lgi}}\\
-\noindent Carnegie Mellon University\hfill\textsmaller{+}1(412) 503-2077\hfill\href{http://www.nitish-kulkarni.com}{\texttt{www.nitish-kulkarni.com}}
+\noindent Master in Computational Data Science\hfill\href{mailto:nitishkk@andrew.cmu.edu}{\texttt{nitishkk\mbox{}@\mbox{}andrew.cmu.edu}}\hfill\href{https://www.linkedin.com/in/ni4lgi}{\texttt{www.linkedin.com/in/ni4lgi}}\\
+\noindent Carnegie Mellon University\hfill\textsmaller{+}1(412) 503-2077\hfill\href{http://www.nitish-kulkarni.com}{\texttt{nitish-kulkarni.com}}\\
 \vspace{2mm}
 % \href{https://www.linkedin.com/in/nitish-kulkarni-90270a33}{www.linkedin.com/in/nitishkulkarni}\\
 
-% TITLE 1
-\roottitle{Education}
+% TITLE: EDUCATION
+\roottitle{EDUCATION}
+    \begin{itemize}[leftmargin=11pt] \itemenvnoindent
+    
+    \item \textbf{Carnegie Mellon University, School of Computer Science} \itemyear{Pittsburgh, PA}\\[\hspacing]
+        \textit{Master in Computational Data Science, Language \& Technologies Institute} \itemyear{Aug 2017 - Dec 2018} \\[\hspacing]
 
-% Education Table 
+    \vspace{-3mm}
 
-\renewcommand{\arraystretch}{1.2}
-\setlength\tabcolsep{8pt}
-\begin{tabularx}{\textwidth}{ !{\lv} *{3}{c !{\lv} } X !{\lv}}
-    Carnegie Mellon University     & \textbf{Master} in Computational Data Science                             &                      & 2017-18 \\ \lh \hline
-    Indian Institute of Technology & \textbf{B.Tech.}:Electrical \textbf{M.Tech.}: Microelectronics \& VLSI &
-    9.13/10 (Rank: 2/24) & \multirow{2}{*}{ 2009-14 } \\ \lh \cline{2-3}
-    Madras, Chennai                       &  \textbf{Minor}:Economics                                          & 9.4/10 (Minor)       &         \\ \hline
-    FIITJEE Junior College, Hyd.          &  XII (State Board, Andhra Pradesh)                                 & 94.1\%               & 2007-09 \\ \hline
-    Guru Nanak Public School, Bidar       &  X (C.B.S.E)                                                       & 92.6\%               & 2006-07 \\ \hline
-\end{tabularx}
-\vspace{2mm}
+    \item \textbf{Indian Institute of Technology Madras}  \itemyear{Chennai, India}\\[\hspacing]
+        \textit{BTech \& MTech, Electrical Engineering; Minor: Economics} \itemyear{Aug 2009 - Jul 2014}\\[\hspacing]
+        \textbf{CGPA: 9.13/10}, Rank: \textbf{2/24} \\[\hspacing]
+        Awarded \textbf{Schneider Electric India Foundation (SEIF) Scholarship},
+        \textbf{Merit Cum Means Scholarship} \& \textbf{C.B.S.E. Merit Scholarship}
+    \end{itemize}
 
-% TITLE 3
+\vspace{1.5mm}
+
+% TITLE: PROFESSIONAL EXPERIENCE
 \roottitle{Professional Experience}
-\vspace{4mm}
 \begin{itemize} \itemenv
     \item \textbf{Associate, Goldman Sachs, Bengaluru} \hfill (\emph{ Fixed Income Strats, Investment Management Division }) \itemyear{Jan 2017 - May -2017}
         \begin{itemize} \itemenv
@@ -101,7 +104,6 @@
 
 % TITLE 3
 \roottitle{INTERNSHIPS}
-\vspace{4mm}
 \begin{itemize} \itemenv
     \item \textbf{ ShubhLoans, DataSigns Technologies, Bengaluru } \hfill({\emph{ Data Analytics and Credit Modeling }}) \itemyear{May - July 2017}
         \begin{itemize} \itemenv
@@ -129,7 +131,6 @@
 
 % TITLE 4
 \roottitle{Projects}
-\vspace{4mm}
 \begin{itemize} \itemenv
     \item \textbf{Modeling of glitching effects in estimation of Dynamic Power consumption} \hfill \itemyear{July 2013 - June 2014} \\
     \emph{Master's Dissertation, Department of Electrical Engg. (Guide: Dr. Nitin Chandrachoodan)}
@@ -141,14 +142,13 @@
 
 % TITLE 5
 \roottitle{Course Work}
-\vspace{2mm}
+\vspace{-2mm}
 \noindent Data Structures and Algorithms, Machine Learning, Image Signal Processing, Probability and Stochastic Processes, Graph Theory, \\ 
 Computational Methods in Electrical Engg., Digital and Analog Signal Processing, Computer Organization and Microprocessors
 \vspace{2mm}
 
 % TITLE 2
-\roottitle{Scholastic Achievements}
-\vspace{4mm}
+\roottitle{Skills}
 \begin{itemize} \itemenv
     \item IITJEE, A.I.R. \textbf{465 out of 4 Lac}; AIEEE, A.I.R. 208 out of 10 Lakh, received \textbf{C.B.S.E. Merit Scholarship} \itemyear{2009}
     \item \textbf{Only student from IIT Madras} to be awarded the \textbf{Schenider Electric India Foundation (SEIF) Scholarship} \itemyear{2011} 
@@ -157,7 +157,6 @@ Computational Methods in Electrical Engg., Digital and Analog Signal Processing,
 
 % TITLE 6
 \roottitle{Honors and Awards}
-\vspace{4mm}
 \begin{itemize} \itemenv
     \item \textbf{Campus Winner} (among top {3} in India ), \textbf{Goldman Sachs Quantify}; represented IITM for finals at GS Bangalore \itemyear{Oct 2013}
     \item \textbf{2nd prize} among 25 finalists, General Electric Research Expo \itemyear{Jan 2013}
@@ -166,6 +165,7 @@ Computational Methods in Electrical Engg., Digital and Analog Signal Processing,
 \end{itemize}
 
 \roottitle{Leadership \& Co-curricular Activities}
+\vspace{-4mm}
 \renewcommand{\arraystretch}{1.2}
 \setlength\tabcolsep{5pt}
 \begin{tabularx}{\textwidth}{ !{\lv} >{\columncolor{table-cell}} c !{\lv} X !{\lv} }
