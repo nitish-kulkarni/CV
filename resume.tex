@@ -3,8 +3,8 @@
 \usepackage[left=0.45in,top=0.4in,right=0.45in,bottom=0.4in]{geometry}
 
 % Font
-\usepackage{tgpagella}
-\usepackage[T1]{fontenc}
+ \usepackage{tgpagella}
+ \usepackage[T1]{fontenc}
 
 % \fontsize{8}{10}
 % Other optional fonts
@@ -45,7 +45,7 @@
 
 \newcommand\roottitle[1]{\vspace{-4mm}\subsubsection*{\uppercase{#1}}\vspace{-0.3em}\nopagebreak[4]\hrule\vspace{4mm}}
 \newcommand\maintitle[3]{\vbox to 0pt{\hfill\scriptsize\color{gray} #3}\vspace{-0.4em}\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
-\newcommand\itemyear[1]{\hfill \textbf{\emph{\color{itemyear} #1}}}
+\newcommand\itemyear[1]{\hfill \emph{\color{itemyear} #1}}
 \newcommand\itemenv{\setlength\itemsep{0.5pt} \addtolength{\itemindent}{-5mm}\vspace{-1.5mm}}
 \newcommand\itemenvnoindent{\setlength\itemsep{-1pt} \vspace{-1.5mm}}
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
@@ -58,18 +58,19 @@
 % The next two lines are to have all four details to the right
 %\vbox to -5mm{\hfill\scriptsize\color{gray} {\small \href{https://www.linkedin.com/in/ni4lgi}{\texttt{www.linkedin.com/in/ni4lgi}}} }
 %\vbox to -5mm{\hfill\scriptsize\color{gray} {\small \href{https://www.linkedin.com/in/ni4lgi}{\texttt{www.linkedin.com/in/ni4lgi}}} }
-\noindent{\LARGE \textbf{Nitish Kulkarni}} \\
-\vspace{-2mm}
+\noindent{\LARGE \scshape \hfill Nitish Kumar Kulkarni \hfill } \\
+% \noindent{\LARGE \textbf{Nitish Kulkarni}} \\
+\vspace{-5mm}
 
 \small
 
-\noindent Master of Computational Data Science\hfill\href{mailto:nitishkk@andrew.cmu.edu}{\texttt{nitishkk\mbox{}@\mbox{}andrew.cmu.edu}}\hfill\href{https://www.linkedin.com/in/ni4lgi}{\texttt{www.linkedin.com/in/ni4lgi}}\\
-\noindent Carnegie Mellon University\hfill\textsmaller{+}1(412) 503-2077\hfill\href{http://www.nitish-kulkarni.com}{\texttt{nitish-kulkarni.com}}\\
+\noindent \href{mailto:nitishkk@andrew.cmu.edu}{\texttt{nitishkk\mbox{}@\mbox{}andrew.cmu.edu}}\hfill\href{https://www.linkedin.com/in/ni4lgi}{\texttt{www.linkedin.com/in/ni4lgi}}\\
+\noindent \textsmaller{+}1(412) 503-2077\hfill\href{http://www.nitish-kulkarni.com}{\texttt{nitish-kulkarni.com}}\\
 \vspace{2mm}
 % \href{https://www.linkedin.com/in/nitish-kulkarni-90270a33}{www.linkedin.com/in/nitishkulkarni}\\
 
 % TITLE: EDUCATION
-\roottitle{EDUCATION}
+\roottitle{Education}
     \begin{itemize}[leftmargin=11pt] \itemenvnoindent
     
     \item \textbf{Carnegie Mellon University, School of Computer Science} \itemyear{Pittsburgh, PA}\\[\hspacing]
