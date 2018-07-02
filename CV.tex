@@ -1,6 +1,6 @@
 \documentclass[8pt,a4paper,English]{article}
 
-\usepackage[left=0.4in,top=0.6in,right=0.35in,bottom=0.3in]{geometry}
+\usepackage[left=0.4in,top=0.8in,right=0.35in,bottom=0.3in]{geometry}
 
 % Font
 % \usepackage{tgpagella}
@@ -23,6 +23,9 @@
 
 % Items
 \usepackage{enumitem}
+
+% For footnote without number
+\usepackage{lipsum}
 
 % for Tables
 \usepackage{multirow}
@@ -48,7 +51,7 @@
 \newcommand{\lh}{\arrayrulecolor{table-border}}
 \newcommand{\lhb}{\arrayrulecolor{black}}
 
-\newcommand\roottitle[1]{ \vspace{3mm} \noindent \textsc{ \large #1} \vspace{1.5mm} \nopagebreak[4] \color{gray} \hrule \color{black} \vspace{2mm} \noindent \small }
+\newcommand\roottitle[1]{ \vspace{3mm} \noindent \textsc{ \normalsize #1} \vspace{1.5mm} \nopagebreak[4] \color{gray} \hrule \color{black} \vspace{2mm} \noindent \small }
 \newcommand\maintitle[3]{\vbox to 0pt{\hfill\scriptsize\color{gray} #3}\vspace{-0.4em}\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
 \newcommand\itemyear[1]{\hfill \textbf{\emph{\color{itemyear} #1}}}
 \newcommand\itemenv{\setlength\itemsep{0.5pt} \addtolength{\itemindent}{-5mm}\vspace{-1.5mm}}
@@ -60,51 +63,54 @@
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
 %%%%%%%%%% BEGINNING THE DOCUMENT %%%%%%%%%%
 
 \begin{document}
 
 % MAIN TITLE
-\noindent{\LARGE \scshape \hfill Nitish Kumar Kulkarni \hfill } \\
-\vspace{-5mm}
+\noindent{\LARGE \scshape \hfill Nitish Kulkarni \hfill } \\
+\vspace{-2mm}
 
 \begin{normalsize}
-    \raggedleft \href{mailto:ni4lgi@gmail.com}{\texttt{ni4lgi\mbox{}@\mbox{}gmail.com}} \\
-%    \href{https://www.linkedin.com/in/ni4lgi}{\texttt{in.linkedin.com/in/ni4lgi}} \\
-    \href{http://www.nitish-kulkarni.com}{\texttt{www.nitish-kulkarni.com}} \\
+	\noindent 5728 Solway Street \hfill
+	\href{mailto:ni4lgi@gmail.com}{\texttt{ni4lgi\mbox{}@\mbox{}gmail.com}} \\
+	Pittsburgh, 15217 \hfill
+	\href{mailto:nitishkk@cmu.edu}{\texttt{nitishkk\mbox{}@\mbox{}cmu.edu}} \\
+	+1 (412) 503 2077 \hfill
+    \href{https://www.linkedin.com/in/ni4lgi}{\texttt{in.linkedin.com/in/ni4lgi}} \\
+    % \href{http://www.nitish-kulkarni.com}{\texttt{www.nitish-kulkarni.com}} \\
 %    \texttt{+91-7760833711} \\[-4mm]
 \end{normalsize}
 
 % \vspace{2mm}
-
+% \small
 %%% RESEARCH INTERESTS %%%
 
-\roottitle{Research Interests}
-Machine Learning, Algorithms, Signal Processing, Computer Vision 
+% \roottitle{Research Interests}
+% Machine Learning, Algorithms, Signal Processing, Computer Vision 
+
+% \roottitle{Contact Information}
+% \setlength\tabcolsep{8pt}
+% \begin{tabularx}{\textwidth}{R{2.6cm} !{\lv} X}
+% Mailing address & 5728 Solway Street \\
+% \end{tabularx}
 
 \roottitle{Education}
 \renewcommand{\arraystretch}{1.2}
 \setlength\tabcolsep{8pt}
 \begin{tabularx}{\textwidth}{R{2.6cm} !{\lv} X}
-  Aug '17 - Present  & \textbf{Carnegie Mellon University}, School of Computer Science, Pittsburgh\\
-						& Masters in \textbf{Computational Data Science}, Major in \textbf{Analytics}\\
+  Aug '17 - Present  	& \textbf{Carnegie Mellon University}, School of Computer Science, Pittsburgh\\
+						& \textit{Master of Computational Data Science}, GPA: 4.06 (4+ Grading Standard) \\
   July '09 - Jul '14    & \textbf{Indian Institute of Technology Madras}, Chennai, India \\
-                        & Dual Degree: B.Tech. in \textbf{Electrical Engineering} \& M.Tech. in \textbf{Microelectronics \& VLSI} \\
-                        & CGPA : \textbf{9.13/10} (aggregate) \& \textbf{9.19/10} (M.Tech. Courses and Thesis) \\
-                        & Minor: \textbf{Economics}; Minor CGPA : \textbf{9.4/10} \\
-                        & \textbf{ $\bm{2^{nd}}$ rank } in Microelectronics and VLSI Dual Degree batch
-\end{tabularx}
-
-%%% ACADEMIC ACHIEVEMENTS %%%
-
-\roottitle{Academic Achievements}
-\renewcommand{\arraystretch}{1.2}
-\setlength\tabcolsep{8pt}
-\begin{tabularx}{\textwidth}{ R{2.6cm} !{\lv} X }
-  August 2011  & Awarded \textbf{ Schneider Electric India Foundation (SEIF) Scholarship } in 2010 \& 11 \\
-  May 2009     & All India Rank of \textbf{465 out of 400,000 } in IIT Joint Entrance Examination, was awarded the \textbf{Merit Cum Means (MCM)} Scholarship \\
-  May 2009	   & All India Rank of \textbf{208 out of 1.1 million} in AIEEE, was awarded the \textbf{C.B.S.E Merit Scholarship} \\
-  October 2008 & \textbf{Olympiads}: \textbf{Top $\bm{1\%}$}, \textbf{National Standard Examination in Physics (NSEP)} \& \textbf{Chemistry(NSEC)} \\
+                        & \textit{B.Tech. in Electrical Engineering \& M.Tech. in Microelectronics \& VLSI}, GPA: 9.13/10, Rank: 2/24\\
+                        & Minor: \textit{Economics}, GPA: 9.4/10 \\
 \end{tabularx}
 
 %%% PROFESSIONAL EXPERIENCE %%%
@@ -113,69 +119,126 @@ Machine Learning, Algorithms, Signal Processing, Computer Vision
 \renewcommand{\arraystretch}{1.2}
 \setlength\tabcolsep{8pt}
 \begin{tabularx}{\textwidth}{ R{2.6cm} !{\lv} X }
+  Jan '17 - May '17 & \textbf{Associate, Goldman Sachs}, Bengaluru, India \\
+					& \begin{minipage}[t]{0.8\textwidth}
+						\begin{itemize}[label={--},leftmargin=*]
+						\setlength\itemsep{-10pt}
+						\item Built trading strategies using anomaly detection, dimensionality reduction and linear regression models \\
+						% \item Built trading strategies using anomaly detection techniques, robust optimization, PCA and multi-stage linear regressions
+						\item Analyzed cross-correlations among financial time series using Bayesian parameter estimations \\
+						\item Designed \& built research tools for computing risk metrics and backtesting trading strategies \\[-4pt]
+						\end{itemize} 
+						\end{minipage} \\
 
-  May '17 - Jul '17 & \textbf{Data Scientist - Intern, DataSigns Technologies}, Bengaluru, India \\
-					& Devised a \textbf{credit model} to predict likelihood of loan defaults in order to approve loans\\
-					& Built a \textbf{scalable server architecture} for processing of loan applications\\
+  Jun '14 - Dec '16 & \textbf{Quantitative Analyst, Goldman Sachs}, Bengaluru, India \\
+						& \begin{minipage}[t]{0.8\textwidth}
+							\begin{itemize}[label={--},leftmargin=*]
+							\setlength\itemsep{-10pt}
+								% \item Prediction of business cycles using dimentionality reduction and regularised multivariate linear regressions over economic data
+								\item Modeled the impact of economic data releases and business cycles over financial assets \\
+								\item Developed infrastructure to aggregate terabytes of data and reflect real-time trades across geographies \\
+								% Developed [client-server] infrastructure to aggregate terabytes of numerical data
+								% Developed caching infrastructure and facilitated real-time updates for everyday tools used by traders
+								% Built a profiler to monitor time and memory performance of the processes run by traders
+								\item Managed an intern, conducted on-site technical interviews and was involved in on-campus recruiting \\[-8pt]
+							\end{itemize} 
+							\end{minipage} \\
+%   & Built quantitative and statistical models to build trading strategies that enhance portfolio performance \\
+%                     & Developed robust infrastructure tools that assist traders in managing their portfolio positions \\
+%                     % BULLET POINTS
+%                     & \textbf{Research Analytics:} \\
+%                     & \begin{minipage}[t]{0.8\textwidth}
+% 	                    \begin{itemize}[label={--},leftmargin=*]
+% 	                    \setlength\itemsep{-10pt}
+% 	                    		\item Identified statistically significant cross-correlations among  time series data using \textbf{Bayesian Inference} \\
+% 	                    		\item Modeled the behaviour of bond prices around the release times of macroeconomic data using regularized linear regression models and \textbf{Principal Component Analysis} \\
+% 	                    		\item Built \textbf{Vector Auto Regression (VAR)}  and nonlinear regression models for forecasting economic data \\
+% 	                    		\item Used \textbf{Robust Optimization} and \textbf{constrained Mean Variance Optimization} to compute stable optimal weights for different trading strategies \\[-5pt]
+% 	                    \end{itemize} 
+%                       \end{minipage} \\
+%                     & \textbf{Software Development:} \\
+%                     & \begin{minipage}[t]{0.8\textwidth}
+% 	                    \begin{itemize}[label={--},leftmargin=*]
+% 	                    \setlength\itemsep{-10pt}
+% 	                    		\item Developed \textbf{caching infrastructure} and facilitated real-time updates for everyday tools used by traders\\
+% 	                    		\item Designed and implemented a \textbf{backtesting framework} to evaluate the effectiveness of strategies \\
+% 	                    		\item Built a \textbf{profiler} to monitor time and memory performance of the processes run by traders \\[-4pt]
+% 	                    \end{itemize} 
+%                       \end{minipage} \\
+\end{tabularx}
 
-  Jun '14 - May '17 & \textbf{Quantitative Analyst, Goldman Sachs}, Bengaluru, India \\
-                    & Built quantitative and statistical models to build trading strategies that enhance portfolio performance \\
-                    & Developed robust infrastructure tools that assist traders in managing their portfolio positions \\
-                    % BULLET POINTS
-                    & \textbf{Research Analytics:} \\
-                    & \begin{minipage}[t]{0.8\textwidth}
-	                    \begin{itemize}[label={--},leftmargin=*]
-	                    \setlength\itemsep{-10pt}
-	                    		\item Identified statistically significant cross-correlations among  time series data using \textbf{Bayesian Inference} \\
-	                    		\item Modeled the behaviour of bond prices around the release times of macroeconomic data using regularized linear regression models and \textbf{Principal Component Analysis} \\
-	                    		\item Built \textbf{Vector Auto Regression (VAR)}  and nonlinear regression models for forecasting economic data \\
-	                    		\item Used \textbf{Robust Optimization} and \textbf{constrained Mean Variance Optimization} to compute stable optimal weights for different trading strategies \\[-5pt]
-	                    \end{itemize} 
-                      \end{minipage} \\
-                    & \textbf{Software Development:} \\
-                    & \begin{minipage}[t]{0.8\textwidth}
-	                    \begin{itemize}[label={--},leftmargin=*]
-	                    \setlength\itemsep{-10pt}
-	                    		\item Developed \textbf{caching infrastructure} and facilitated real-time updates for everyday tools used by traders\\
-	                    		\item Designed and implemented a \textbf{backtesting framework} to evaluate the effectiveness of strategies \\
-	                    		\item Built a \textbf{profiler} to monitor time and memory performance of the processes run by traders \\[-4pt]
-	                    \end{itemize} 
-                      \end{minipage} \\
+\roottitle{Internships}
+\renewcommand{\arraystretch}{1.2}
+\setlength\tabcolsep{8pt}
+\begin{tabularx}{\textwidth}{ R{2.6cm} !{\lv} X }
 
-  May '13 - Jul '13 & \textbf{Intern, Qualcomm Inc.}, Bengaluru, India \\
+  May '18 - Present & \textbf{Applied Scientist Intern, A9.com}, Palo Alto, CA \\
+					& \emph{Personalization of Amazon Search for digital products} \\
+					& \begin{minipage}[t]{0.8\textwidth}
+					\begin{itemize}[label={--},leftmargin=*]
+					\setlength\itemsep{-10pt}
+						\item Working on devising low-latency machine learning algorithms for personalizing search for kindle e-books \\[-4pt] % and Amazon Prime videos \\
+					\end{itemize} 
+					\end{minipage} \\
+
+  May '17 - Jul '17 & \textbf{Data Science Intern, DataSigns Technologies}, Bengaluru, India \\
+					& \emph{Modeling of credit underwriting for loan applications} \\
+					& \begin{minipage}[t]{0.8\textwidth}
+					\begin{itemize}[label={--},leftmargin=*]
+					\setlength\itemsep{-10pt}
+						\item Devised logistic regression based credit models to predict the likelihood of loan defaults \\
+						\item Built a scalable server architecture for processing of loan applications \\[-4pt]
+					\end{itemize} 
+					\end{minipage} \\
+
+  May '13 - Jul '13 & \textbf{Software Engineering Intern, Qualcomm Inc.}, Bengaluru, India \\
   					& \emph{Estimation of critical paths in pre-silicon validation} \\
   					& \begin{minipage}[t]{0.8\textwidth}
 	                  \begin{itemize}[label={--},leftmargin=*]
 	                    \setlength\itemsep{-10pt}
-		                    \item Implemented a \textbf{path-extraction algorithm} to find the top critical paths in a digital circuit \\
-		                    \item Built a user interface for a new tool, optimized existing tools and halved their run-time \\
-		                    \item Received a \textbf{Pre-Placement Offer} for the position of an Engineer at the firm \\[-4pt] 	                    
+		                    \item Implemented a path-extraction algorithm to find the top critical paths in a digital circuit \\[-4pt]
+		                    % \item Built a user interface for a new tool, optimized existing tools and halved their run-time \\
+		                    % \item Received a \textbf{Pre-Placement Offer} for the position of an Engineer at the firm \\[-4pt]
 	                    \end{itemize} 
                       \end{minipage} \\
 
-  May '12 - Jul '12 & \textbf{Intern, Texas Instruments}, Bengaluru, India \\
+  May '12 - Jul '12 & \textbf{Electrical Engineering Intern, Texas Instruments}, Bengaluru, India \\
                     & \emph{Estimation of Soft Error Rate in Semiconductor Devices} \\
    					& \begin{minipage}[t]{0.8\textwidth}
 	                  \begin{itemize}[label={--},leftmargin=*]
 	                    \setlength\itemsep{-10pt}
-		                    \item Automated the process of estimation of \textbf{Fault In Time (FIT)} for large  digital circuits \\
-		                    \item Formulated a \textbf{probabilistic technique} for estimating \textit{Soft Error Rate} with 94\% accuracy \\
-		                    \item Was offered an \textbf{Extension of Internship Programme} for the year of 2013 \\[-4pt] 
+		                    \item Automated the process of estimation of \textit{Fault In Time (FIT)} for large  digital circuits \\
+		                    \item Formulated a probabilistic technique for estimating \textit{Soft Error Rate} with 94\% accuracy \\[-4pt]
+		                    % \item Was offered an \textbf{Extension of Internship Programme} for the year of 2013 \\[-4pt] 
 	                    \end{itemize} 
                       \end{minipage} \\
                       
-  May '11 - Jul '11 & \textbf{Intern, Harness Handitouch Pvt. Ltd.}, Chennai, India \\
+  May '11 - Jul '11 & \textbf{Product Development Intern, Harness Handitouch Pvt. Ltd.}, Chennai, India \\
                     & \emph{Product development of FTIR-based multitouch surface} \\
    					& \begin{minipage}[t]{0.8\textwidth}
 	                  \begin{itemize}[label={--},leftmargin=*]
 	                    \setlength\itemsep{-10pt}
-		                    \item Built an alpha-prototype of a \textbf{multi-touch surface}, costing almost 80\% lesser than a similar commercial product in the market \\
-		                    \item Proposed and developed \textbf{a low-cost smart board}, using \textbf{IR sensing and Video Processing} \\
-		                    \item Won the \textbf{Best Intern Award} for demonstrating cost-effective alternatives to multi-touch products \\[5pt] 
+		                    \item Designed and built an \textit{FTIR}-based multi-touch surface and a low-cost smart board using IR-sensing \\
+		                    % \item Proposed and developed \textbf{a low-cost smart board}, using \textbf{IR sensing and Video Processing} \\
+		                    \item Won the \textit{Best Intern Award} for demonstrating cost-effective alternatives to multi-touch products \\[5pt] 
 	                    \end{itemize} 
                       \end{minipage} \\
 
 \end{tabularx}
+
+%%% PUBLICATIONS %%%
+\roottitle{Publications}
+\renewcommand{\arraystretch}{1.2}
+\setlength\tabcolsep{8pt}
+\begin{tabularx}{\textwidth}{ R{2.6cm} !{\lv} X }
+  May 2018     & Nitish Kulkarni$^*$, Vasu Sharma$^*$, Srividya Pranavi$^*$, Gabriel Bayomi$^*$, Eric Nyberg, Teruko Mitamura, ``\textit{BioAMA: Towards an End to End BioMedical Question Answering System}'', BioNLP Workshop, Annual Meeting of the Association for Computational Linguistics  (ACL), Melbourne, Australia 2018 \\[3pt]
+  May 2018     & $\lbrack$Submitted$\rbrack$ Nitish Kulkarni$^*$, Mansi Gupta$^*$, Danish D.$^*$, Graham Neubig and Eduard Hovy, ``\textit{Interpreting Information Encoded in Neural Models for Language Tasks with Application to Transfer Learning}'', Conference on Empirical Methods in Natural Language Processing (EMNLP) 2018 \\
+\end{tabularx}
+
+\vspace{5mm}
+% \hspace{2mm}
+\noindent {\small $^*$ denotes equal contribution \\
+\pagebreak
 
 %%% PROJECTS %%%
 
@@ -184,37 +247,64 @@ Machine Learning, Algorithms, Signal Processing, Computer Vision
 \setlength\tabcolsep{8pt}
 \begin{tabularx}{\textwidth}{ R{2.6cm} !{\lv} X }
 
-  Jul '13 - Jun '14 & \textbf{Modeling of glitching effects in estimation of Dynamic Power consumption}\\
+	Jan '18 - Present & \textbf{Explicable Question Answering for Consumer Products} \emph{(Guide: Dr. Zach Chase Lipton)} \\
+		& \begin{minipage}[t]{0.8\textwidth}
+		\begin{itemize}[label={--},leftmargin=*]
+		\setlength\itemsep{-10pt}
+			\item Built end-to-end Question Answering models to generate natural language answers using product reviews \\
+			\item Implemented hierarchical attention-based sequence to sequence models for generating answers \\[-5pt]
+		\end{itemize} 
+		\end{minipage} \\
+
+	Jan '18 - May '18 & \textbf{Automatic goal generation for Hindsight Experience Replay} \\
+		& \begin{minipage}[t]{0.8\textwidth}
+		\begin{itemize}[label={--},leftmargin=*]
+		\setlength\itemsep{-10pt}
+			\item Implemented generative models for sample-efficient replay in multi-goal deep reinforcement learning \\[-5pt]
+		\end{itemize} 
+		\end{minipage} \\
+
+	Aug '17 - Dec '17 & \textbf{Question Relevance in Visual Question Answering} \\
+		& \begin{minipage}[t]{0.8\textwidth}
+		\begin{itemize}[label={--},leftmargin=*]
+		\setlength\itemsep{-10pt}
+			\item Curated a large dataset using VQA 2.0 and visual genome datasets \\
+			\item Trained deep CNN and LSTM based models for assessing if a question can be answered by an image \\[-5pt]
+		\end{itemize} 
+		\end{minipage} \\
+
+	Aug '17 - Dec '17 & \textbf{Zero Shot Learning of Vectorized Sketch Images} \\
+		& \begin{minipage}[t]{0.8\textwidth}
+		\begin{itemize}[label={--},leftmargin=*]
+		\setlength\itemsep{-10pt}
+			\item Built deep generative RNN models to draw sketches from unseen images \\
+			\item Devised dynamic time warping based as well as clustering based evaluation techniques \\[-5pt]
+		\end{itemize} 
+		\end{minipage} \\
+
+  Jul '13 - Jun '14 & \textbf{Modeling of glitching effects in estimation of Dynamic Power consumption} \\
                     & \emph{Master's Dissertation, Department of Electrical Engg. (Guide: Dr. Nitin Chandrachoodan)} \\
-   					& \begin{minipage}[t]{0.8\textwidth}
-	                  \begin{itemize}[label={--},leftmargin=*]
-	                    \setlength\itemsep{-10pt}
-		                    \item Implemented \textbf{probability propagation algorithm} to estimate average number of transitions at every node in a digital circuit \\
-		                    \item Modeled the bounds of glitch power in a circuit by \textbf{ambiguity interval propagation algorithm} \\
-		                    \item Studied the \textbf{impact of process variations} on dynamic power consumption by \textbf{Monte Carlo Analysis} and developed an approach to identify high glitch nets. \\[-5pt]
-	                    \end{itemize} 
-                      \end{minipage} \\
+		& \begin{minipage}[t]{0.8\textwidth}
+			\begin{itemize}[label={--},leftmargin=*]
+			\setlength\itemsep{-10pt}
+				\item Implemented a probabilistic algorithm to estimate average transitions at every node in a digital circuit \\
+				% \item Modeled the bounds of glitch power in a circuit by \textbf{ambiguity interval propagation algorithm} \\
+				\item Studied the impact of process variations on dynamic power consumption by Monte Carlo Analysis \\ [-5pt]
+			\end{itemize} 
+			\end{minipage} \\
 
-  Feb '13 - Mar '13 & \textbf{FPGA-based Microcontroller} \\
-                    & \textit{Guide: Dr. Nitin Chandrachoodan, Associate Prof., IIT Madras}\\
-   					& \begin{minipage}[t]{0.8\textwidth}
-	                  \begin{itemize}[label={--},leftmargin=*]
-	                    \setlength\itemsep{-10pt}
-		                    \item Designed a \textbf{programmable microcontroller} on an FPGA board \\
-		                    \item Prototyped a \textbf{Fibonacci generator} and an \textbf{Analog to Digital Converter} on the microcontroller \\[-5pt]
-	                    \end{itemize} 
-                      \end{minipage} \\                    
- 
-  Nov '12 - Dec '12 & \textbf{Smart Switch-board \& Centralized Inverter for Variable Frequency Drive} \\
-                    & \textit{Schneider Electric Innovation Challenge} \\
-   					& \begin{minipage}[t]{0.8\textwidth}
-	                  \begin{itemize}[label={--},leftmargin=*]
-	                    \setlength\itemsep{-10pt}
-		                    \item Built a \textbf{smart switch-board} to minimize redundant power consumption owing to human negligence \\
-		                    \item Demonstrated a technique to install \textbf{Variable Frequency Drive} for house-hold motor-based appliances using a centralized inverter \\[-5pt]
-	                    \end{itemize} 
-                      \end{minipage} \\                    
+\end{tabularx}
 
+%%% ACADEMIC ACHIEVEMENTS %%%
+
+\roottitle{Academic Achievements}
+\renewcommand{\arraystretch}{1.2}
+\setlength\tabcolsep{8pt}
+\begin{tabularx}{\textwidth}{ R{2.6cm} !{\lv} X }
+  August 2011  & Awarded \textit{ Schneider Electric India Foundation Scholarship } in 2010 \& 11 \\
+  May 2009     & Awarded \textit{Merit Cum Means Scholarship} for an All India Rank of 465 out of 400,000 in IITJEE \\
+  May 2009	   & Awarded \textit{C.B.S.E Merit Scholarship} for an All India Rank of 208 out of 1.1 million in AIEEE \\
+  October 2008 & \textit{Olympiads}: Top $\bm{1\%}$, National Standard Examination in Physics (NSEP) \& Chemistry (NSEC) \\
 \end{tabularx}
 
 %%% TEACHING %%%
@@ -223,15 +313,16 @@ Machine Learning, Algorithms, Signal Processing, Computer Vision
 \renewcommand{\arraystretch}{1.2}
 \setlength\tabcolsep{8pt}
 \begin{tabularx}{\textwidth}{ R{2.6cm} !{\lv} X }
-  May '14 - Jun '14 & \textbf{Tutor}, short term course on \textbf{ Programming in Python} by \textit{Reflections - Dhruva Club, IIT Madras}\\
-  Feb '14 - Apr '14 & \textbf{Tutor, Computer Organization \& Architecture}, Quality Enhancement in Engg. Education \textbf{(QEEE)} \\
-  					& Conducted live tutoring sessions for undergraduate students studying in remote areas \\
-  Jan '14 - May '14 & \textbf{Teaching Assistant, Digital IC Design}, IIT Madras \\
-                    & Held lectures and conducted tutorials with an audience of over 100 undergraduates \\
-  Jun '13 - Dec '13 & \textbf{Teaching Assistant, Data Structures and Algorithms}, IIT Madras \\
+  Aug '18 - Dec '18 & Graduate Teaching Assistant, \textit{Math Foundations in Data Science}, CMU \\
+  Jan '18 - May '18 & Graduate Teaching Assistant, \textit{Machine Learning for Large Datasets}, CMU \\
+  May '14 - Jun '14 & Tutor, short term course on \textit{ Programming in Python} by \textit{Reflections - Dhruva Club, IIT Madras}\\
+  Feb '14 - Apr '14 & Tutor, \textit{Computer Organization \& Architecture}, Quality Enhancement in Engg. Education \textit{(QEEE)} \\
+  					% & Conducted live tutoring sessions for undergraduate students studying in remote areas \\
+  Jan '14 - May '14 & Teaching Assistant, \textit{Digital IC Design}, IIT Madras \\
+                    % & Held lectures and conducted tutorials with an audience of over 100 undergraduates \\
+  Jun '13 - Dec '13 & Teaching Assistant, \textit{Data Structures and Algorithms}, IIT Madras \\
                         % Some description here?
-  Jun '12 - May '13 & \textbf{Head, Electronics Club}, IIT Madras \\
-                    & Conducted \textbf{interactive sessions and workshops} for hands-on electronics; with a club membership of over 90, pooled in resources and mentored mini-projects \\
+                    % & Conducted \textbf{interactive sessions and workshops} for hands-on electronics; with a club membership of over 90, pooled in resources and mentored mini-projects \\
 \end{tabularx}
 
 %%% HONORS AND AWARDS %%%
@@ -240,27 +331,25 @@ Machine Learning, Algorithms, Signal Processing, Computer Vision
 \renewcommand{\arraystretch}{1.2}
 \setlength\tabcolsep{8pt}
 \begin{tabularx}{\textwidth}{ R{2.6cm} !{\lv} X }
-    October 2013    & \textbf{Campus Winner} (among top {3} in India ), \textbf{Goldman Sachs Quantify}$^\ddag$ 2013; represented IIT Madras and presented solutions at Goldman Sachs, Bengaluru \\
-	March 2013		& \textbf{Finalists}, among the 2 teams selected to represent IIT Madras at \textbf{Inter IIT Tech Summit} \\
-    January 2013    & \textbf{$\mathbf{2^{nd}}$ prize} among 25 finalists, \textbf{General Electric Research Expo} \\ 
-    December 2012   & \textbf{Top 9} teams (out of 150 teams nationwide), \textbf{Schneider Electric Innovation Challenge} \\ 
+    October 2013    & Campus Winner (among top {3} in India ), \textit{Goldman Sachs Quantify}$^\ddag$ 2013 \\ %; represented IIT Madras and presented solutions at Goldman Sachs, Bengaluru \\
+	March 2013		& Finalist, among the 2 teams selected to represent IIT Madras at \textit{Inter IIT Tech Summit} \\
+    January 2013    & $2^{nd}$ prize among 25 finalists, \textit{General Electric Research Expo} \\ 
+    December 2012   & Finalist (top 9 out of 150 teams nationwide), \textit{Schneider Electric Innovation Challenge} \\
 \end{tabularx}
 
 %%% RELEVANT COURSEWORK %%%
 
-\roottitle{Relevant Course Work} \\
+\roottitle{Course Work and skills} \\
 \renewcommand{\arraystretch}{1.2}
 \setlength\tabcolsep{8pt}
-\begin{tabularx}{\textwidth}{ r !{\lv} X }
-\textbf{Math}               & Probability and Stochastic Processes, Graph Theory, Calculus - Single \& Multi Variable \\
-\textbf{Computer Science}   & Data Structures \& Algorithms, Machine Learning, Computational Methods in Electrical Engg. \\
-\textbf{Signal Processing}  & Image Signal Processing, Digital and Analog Signal Processing, Control Engineering \\[2pt]
+\begin{tabularx}{\textwidth}{ R{2.8cm} !{\lv} X }
+	CMU                        & Machine Learning (PhD), Deep Learning, Search Engines, Machine Learning with Large Datasets \\
+		& Deep RL, Neural Networks for NLP, Question Answering, Structured Prediction for Language \\
+	% \textbf{IIT Madras}                 & Probability and Stochastic Processes, Data Structures \& Algorithms, Graph Theory \\
+		% & Image Signal Processing, Analog \& Digital Signal Processing \\
+	Programming                & Python, C, Java, Matlab, R, Octave, Shell, Perl \\
+	Tools/Frameworks           & PyTorch, TensorFlow, Keras, Spark, Hadoop, Scikit-learn, Pandas, MapReduce, MongoDB, SQL \\
 \end{tabularx}
-
-%%% PROGRAMMING SKILLS %%%
-
-\roottitle{Programming Skills}
-\noindent C, C++, Python, Matlab, R, Verilog, Perl, Unix \\[-5pt]
 
 %%% LEADERSHIP AND EXTRA-CURRICULAR ACTIVITIES %%%
 
@@ -272,13 +361,15 @@ Machine Learning, Algorithms, Signal Processing, Computer Vision
 % todo: MITR?
 2017 & \textbf{Vice President Public Relations}, Koramangala Toastmasters Club, \textit{Toastmasters International}, Jan-Jun 2017 \\
 2015 & \textbf{Organizer}, \textit{Goldman Sachs Quantify}$^\ddag$ 2014 \& 15 \\
-2013 & Placed $\mathbf{2^{nd}}$ at the event \emph{The Ultimate Engineer}, at Shaastra$^\dag$ 2013, IIT Madras \\
-2012 & \textbf{Counselor}, \textit{Mitr}, a peer-to-peer counselling body at IIT Madras \\
+2013 & \textbf{Head, Electronics Club}, IIT Madras \\
+% 2013 & Placed $\mathbf{2^{nd}}$ at the event \emph{The Ultimate Engineer}, at Shaastra$^\dag$ 2013, IIT Madras \\
+2012 & \textbf{Counselor}, \textit{Mitr}, a peer-to-peer counseling body at IIT Madras \\
 2011 & \textbf{Coordinator}, \emph{Shaastra Circuit Design Challenge}, Shaastra$^\dag$ 2011, IIT Madras \\
-2011 & Won a debate event called \textbf{Big Fight} in \textbf{Forays}, the mathematics department festival of IIT Madras\\
 2010 & \textbf{Coordinator}, \emph{Project X}, Shaastra$^\dag$ 2010, IIT Madras \\
-2009 & Placed $\mathbf{2^{nd}}$ at \emph{Dramatics, LitSoc} - an Inter-hostel literary event at IIT Madras \\ 
+2011 & Won a debate event called \textit{Big Fight} in \textit{Forays}, the mathematics department festival of IIT Madras\\
+2009 & Placed $2^{nd}$ at \emph{Dramatics, LitSoc} - an Inter-hostel literary event at IIT Madras \\ 
 \end{tabularx}
+
 
 \vspace{5mm}
 
