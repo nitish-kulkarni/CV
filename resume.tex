@@ -47,6 +47,7 @@
 \newcommand\roottitle[1]{\vspace{-4mm}\subsubsection*{\uppercase{#1}}\vspace{-0.3em}\nopagebreak[4]\hrule\vspace{4mm}}
 \newcommand\maintitle[3]{\vbox to 0pt{\hfill\scriptsize\color{gray} #3}\vspace{-0.4em}\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
 \newcommand\itemyear[1]{\hfill \emph{\color{itemyear} #1}}
+% \newcommand\itemenv{\setlength\itemsep{0.5pt} \addtolength{\itemindent}{-5mm}\vspace{-1.5mm}}
 \newcommand\itemenv{\setlength\itemsep{0.5pt} \addtolength{\itemindent}{-5mm}\vspace{-1.5mm}}
 \newcommand\itemenvnoindent{\setlength\itemsep{-1pt} \vspace{-1.5mm}}
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
@@ -94,93 +95,97 @@
 
 % TITLE: PROFESSIONAL EXPERIENCE
 \roottitle{Professional Experience}
-\begin{itemize} \itemenv
+\begin{itemize}[leftmargin=11pt] \itemenvnoindent
 
-    \item \textbf{Applied Scientist Intern, A9.com, Palo Alto} \hfill({\emph{Digital Relevance, Amazon Search}}) \itemyear{May 2018 - Aug 2018}
-        \begin{itemize} \itemenv
-            \item Worked on personalizing Amazon search for Kindle e-books and Amazon Video using low-latency machine learning algorithms
-        \end{itemize}
-
-    \item \textbf{Associate, Goldman Sachs, Bengaluru} \hfill (\emph{Fixed Income Strats, Investment Management Division}) \itemyear{Jan - May 2017}
+    \item \textbf{Goldman Sachs}, Fixed Income Strats, Investment Management Division \itemyear{Jun 2014 - May 2017} \\
+    \textit{Associate, Quantitative Strategist} \itemyear{Bengaluru}
         \begin{itemize} \itemenv
             \item Built trading strategies using anomaly detection techniques, dimensionality reduction and linear regression models
             % \item Built trading strategies using anomaly detection techniques, robust optimization, PCA and multi-stage linear regressions
             % \item Analyzed cross-correlations among financial time series using Bayesian parameter estimations for vector autoregressive models
             \item Designed \& built research tools for computing risk metrics, analyzing statistical properties and backtesting trading strategies
             % \item Used robust optimization and constrained mean-variance optimization to compute stable optimal weights for different trading strategies
-        \end{itemize}
-
-    \item \textbf{Quantitative Analyst, Goldman Sachs, Bengaluru} \hfill (\emph{Fixed Income Strats, Investment Management}) \itemyear{Jun 2014 - Dec 2016}
-        \begin{itemize} \itemenv
             % \item Prediction of business cycles using dimentionality reduction and regularised multivariate linear regressions over economic data
             \item Modeled the impact of economic data releases and business cycles over financial assets using linear regression and SVMs
             \item Developed infrastructure to aggregate terabytes of data and reflect real-time trades consistently across multiple geographies
             % Developed [client-server] infrastructure to aggregate terabytes of numerical data
             % Developed caching infrastructure and facilitated real-time updates for everyday tools used by traders
             % Built a profiler to monitor time and memory performance of the processes run by traders
-            \item Managed an intern, conducted on-site technical interviews and was involved in on-campus recruiting
+        \end{itemize}
+\end{itemize}
+
+% \vspace{-3.5mm}
+
+% TITLE: INTERNSHIPS
+\roottitle{Internships}
+\begin{itemize}[leftmargin=11pt] \itemenvnoindent
+        
+    \item \textbf{A9.com, Palo Alto} $|$ \textit{Applied Scientist Intern (Digital Relevance, Amazon Search)} \itemyear{May 2018 - Aug 2018}
+    % \textit{Applied Scientist Intern} \itemyear{Palo Alto, CA}
+        \begin{itemize} \itemenv
+            \item Worked on personalizing Amazon search for Kindle e-books and Amazon Video using low-latency machine learning algorithms
         \end{itemize}
 
-        \item \textbf{Data Science Intern, DataSigns Technologies, Bengaluru } \hfill({\emph{Data Analytics and Credit Modeling}}) \itemyear{May - Jul 2017}
-        \begin{itemize} \itemenv
-            \item Devised a credit underwriting model based on logistic regression to predict the likelihood of loan defaults
-            % \item Engineered classification features from unstructured data including texts, financial transactions, location and social media
-            % \item Built \textbf{a User Interface} for a new tool, established compatibility with an existing tool, and \textbf{halved its run-time} 
-        \end{itemize}
+    \item \textbf{DataSigns Technologies, Bengaluru} $|$ \textit{Data Science Intern (Data Analytics and Credit Modeling)} \itemyear{May - Jul 2017}
+    \begin{itemize} \itemenv
+        \item Devised a credit underwriting model based on logistic regression to predict the likelihood of loan defaults
+        % \item Engineered classification features from unstructured data including texts, financial transactions, location and social media
+        % \item Built \textbf{a User Interface} for a new tool, established compatibility with an existing tool, and \textbf{halved its run-time} 
+    \end{itemize}
 
-        \item \textbf{Software Engineering Intern, Qualcomm Inc., Bengaluru} \itemyear{May - Jul 2013}
-        \begin{itemize} \itemenv
-            \item Extracted the top critical paths for a digital circuit using graph traversal algorithms and Monte Carlo simulations
-            % \item Processed large amounts of text data using perl to model digital circuits as Directed Acyclic Graphs
-            % \item Built \textbf{a User Interface} for a new tool, established compatibility with an existing tool, and \textbf{halved its run-time} 
-        \end{itemize}
+    \item \textbf{Qualcomm Inc., Bengaluru} $|$ \textit{Software Engineering Intern} \itemyear{May - Jul 2013}
+    \begin{itemize} \itemenv
+        \item Extracted the top critical paths for a digital circuit using graph traversal algorithms and Monte Carlo simulations
+        % \item Processed large amounts of text data using perl to model digital circuits as Directed Acyclic Graphs
+        % \item Built \textbf{a User Interface} for a new tool, established compatibility with an existing tool, and \textbf{halved its run-time} 
+    \end{itemize}
 
-    \item \textbf{Electrical Engineering Intern, Texas Instruments, Bengaluru} \itemyear{May - Jul 2012}
-        \begin{itemize} \itemenv
-            % \item Interfaced CAD tools using shell and tcl scripts to streamline the estimation of \textit{Fault In Time} for semiconductor devices
-            \item Developed a probabilistic technique for estimation of \emph{Soft Error Rate} to achieve 94\% accuracy against simulations
-        \end{itemize}
-
-    \item \textbf{Product Development Intern, Harness Handitouch Pvt. Ltd., Chennai} \itemyear{May - Jul 2011}
-        \begin{itemize} \itemenv
-            \item Designed and built an FTIR-based multitouch surface; won the \textit{Best Inten Award}
-            % \item Built an alpha-prototype using video processing of an IR camera feed, reduced the cost of the product by 80\%
-        \end{itemize}
+    \item \textbf{Texas Instruments, Bengaluru} $|$ \textit{Electrical Engineering Intern} \itemyear{May - Jul 2012}
+    \begin{itemize} \itemenv
+        % \item Interfaced CAD tools using shell and tcl scripts to streamline the estimation of \textit{Fault In Time} for semiconductor devices
+        \item Developed a probabilistic technique for estimation of \emph{Soft Error Rate} to achieve 94\% accuracy against simulations
+    \end{itemize}
 
     \end{itemize}
 
 % TITLE: Publications
-\roottitle{Publications}
+\roottitle{Publication}
 \begin{itemize}[align=left, leftmargin=1em, itemindent=0mm, labelsep=0pt, labelwidth=1em]
     \vspace{-1.5mm}
     \item \textbf{Nitish Kulkarni}$^*$, Vasu S$^*$, Srividya Pranavi$^*$, G. Bayomi$^*$, Eric Nyberg, Teruko M., ``\textbf{BioAMA: Towards an End to End BioMedical Question Answering System}'', Annual Meeting of the Association for Computational Linguistics  (ACL), BioNLP track, Melbourne, Australia 2018 \itemyear{2018}
-    \item $\lbrack$Submitted$\rbrack$ \textbf{Nitish Kulkarni}$^*$, Mansi Gupta$^*$, Danish D.$^*$, Graham Neubig and Eduard Hovy, ``\textbf{Interpreting Information Encoded in Neural Models for Language Tasks with Application to Transfer Learning}'', Conference on Empirical Methods in Natural Language Processing (EMNLP) 2018 \itemyear{2018}
 \end{itemize}
 
 % TITLE: PROJECTS
-\roottitle{Projects}
+\roottitle{Research Projects}
 \begin{itemize} \itemenv
-    \item \textbf{Explicable Question Answering for Consumer Products}\itemyear{Jan 2018 - Present}
+    \item \textbf{Interpreting Information Encoded In Neural Models For Language Tasks} \itemyear{Jan 2018 - Present}
+    \begin{itemize} \itemenv
+        \item Investigated the nature and density of task-specific information encoded in unsupervised neural sentence representations
+        \item \textbf{Working Paper}: \textbf{Nitish Kulkarni}$^*$, Mansi Gupta$^*$, Danish D.$^*$, Graham Neubig and Eduard Hovy, ``\textit{Interpreting Information Encoded in Neural Models for Language Tasks with Application to Transfer Learning}'' \href{https://drive.google.com/file/d/0B-tcIl8ikTixZnZRaVF0OWFKc2puR0dnOE9rSWlEZ2pPUjRF/view}{\texttt{[Link]}}
+    \end{itemize}
+
+    \item \textbf{Explicable Question Answering for Consumer Products} \href{https://drive.google.com/file/d/1vZldZ2ho2fDm7pu8WaiPKcUYhhFN7507/view}{\texttt{[Link]}} \itemyear{Jan 2018 - Present}
         \begin{itemize} \itemenv
             \item Implemented hierarchical attention-based sequence to sequence models for generating answers conditioned on product reviews
+            % \item \textbf{Working Paper}: \textbf{Nitish Kulkarni}$^*$, Mansi Gupta$^*$, Raghuveer C.$^*$, Zachary Lipton, ``\textit{Review-based Question Answering for Consumer Products}''
         \end{itemize}
     
-    \item \textbf{Automatic goal generation for Hindsight Experience Replay in mutli-goal RL}\itemyear{Jan - May 2018}
+    \item \textbf{Automatic goal generation for Hindsight Experience Replay in mutli-goal RL} \href{https://github.com/nitish-kulkarni/Automatic-Hindsight-Experience-Replay}{\texttt{[Link]}} \itemyear{Jan - May 2018}
         \begin{itemize} \itemenv
             \item Proposed and implemented generative models for sample-efficient experience replay in multi-goal deep reinforcement learning
         \end{itemize}
 
-    \item \textbf{End-to-end vs modularized Question Answering systems for multiple question-type corpora}\itemyear{Jan - May 2018}
+    \item \textbf{End-to-end vs modularized Question Answering systems for multiple question-type corpora} \href{https://github.com/nitish-kulkarni/BioASQ-Question-Answering}{\texttt{[Link]}} \itemyear{Jan - May 2018}
         \begin{itemize} \itemenv
             \item Built heuristic-based as well as deep QA systems for BioASQ and MS MARCO datasets, analyzed relative merits \& demerits
         \end{itemize}
         
-    \item \textbf{Question Relevance in Visual Question Answering}\itemyear{Aug - Dec 2017}
+    \item \textbf{Question Relevance in Visual Question Answering} \href{https://github.com/nitish-kulkarni/Question-Relevance-in-VQA}{\texttt{[Link]}} \itemyear{Aug - Dec 2017}
         \begin{itemize} \itemenv
             \item Curated a large dataset; trained deep CNN and LSTM based models for assessing if a question can be answered by an image
         \end{itemize}
 
-    \item \textbf{Zero Shot Learning of Vectorized Sketch Images}\itemyear{Aug - Dec 2017}
+    \item \textbf{Zero Shot Learning of Vectorized Sketch Images} \href{https://github.com/nitish-kulkarni/Generation-of-vector-images-using-GANs}{\texttt{[Link]}} \itemyear{Aug - Dec 2017}
         \begin{itemize} \itemenv
             \item Built deep generative RNN models to draw sketches from unseen images; devised dynamic time warping based evaluation
         \end{itemize}
@@ -206,9 +211,10 @@
 \begin{tabularx}{\textwidth}{ l @{ - } X }
 \textbf{CMU}                        & Machine Learning (PhD), Deep Learning, Deep Reinforcement Learning, ML with Large Datasets  \\
                                     & Neural Networks for NLP, Question Answering, Search Engines, Structured Prediction for Language \\
+                                    & Convex Optimization$^{**}$, Advanced Multimodal Machine Learning$^{**}$ \\
 % \textbf{IIT Madras}                 & Probability and Stochastic Processes, Data Structures \& Algorithms, Graph Theory \\
                                     % & Image Signal Processing, Analog \& Digital Signal Processing \\
-\textbf{Teaching Assistant}         & Machine Learning with Large Datasets, Data Structures and Algorithms, Digital IC Design \\
+\textbf{Teaching Assistant}         & Machine Learning with Large Datasets, Data Science Seminar, Data Structures \& Algorithms, Digital Design \\
 \textbf{Programming}                & Python, C, Java, Matlab, R, Octave, Shell, Perl \\
 \textbf{Tools/Frameworks}           & PyTorch, TensorFlow, Keras, Spark, Hadoop, Scikit-learn, Pandas, MapReduce, MongoDB, SQL \\
 \end{tabularx}
@@ -227,6 +233,7 @@
 % \end{itemize}
 \vspace{1mm}
 
-\noindent \textsmaller{$^*$denotes equal contribution}
+\noindent \textsmaller{$^*$denotes equal contribution}\\
+\noindent \textsmaller{$^{**}$currently undertaking}
 
 \end{document}
